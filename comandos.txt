@@ -1,0 +1,5 @@
+sudo systemctl start servidor1
+sudo systemctl enable servidor1
+sudo systemctl status servidor1
+sudo systemctl stop servidor1
+sudo systemctl restart servidor1

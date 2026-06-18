@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve servidor1
+After=network.target
+
+[Service]
+User=rgb
+Group=www-data
+WorkingDirectory=/home/rgb/servidor1
+Environment="PATH=/home/rgb/servidor1/venv/bin"
+ExecStart=/home/rgb/servidor1/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:5000 wsgi:app
+
+
+[Install]
+WantedBy=multi-user.target
