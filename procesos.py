@@ -37,6 +37,10 @@ def menu_temp3():
     cur = con.cursor()
     cur.execute("SELECT * FROM menu_temp3" ) 
     datos = cur.fetchall()
+    # salvar (commit) los cambios 
+    con.commit()
+    con.close()
+    return(datos)
 
 def menu_pelis():
     import sqlite3
